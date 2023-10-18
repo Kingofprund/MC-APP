@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>MC APP</title>
+  </head>
+  <body>
+    <div class="welcome-body container-body container-flex first-page">
+      <h1>Welcome to my mc app</h1>
+      <img class="logo" src="poze/mclogo.png" alt="logo" />
+      <!-- <img src="poze/mcpozawelcome.jpg" alt="burger + fries" /> -->
+      <button class="welcome-button">Continue</button>
+    </div>
+    <div class="container-body welcome-body container-flex second-page hidden">
+      <h1>Dining Location</h1>
+      <div class="buttons">
+        <div class="button-photo"><h2>Eat In</h2></div>
+        <div class="button-photo"><h2>Take Away</h2></div>
+      </div>
+    </div>
+    <div class="container-body welcome-body container-flex third-page hidden">
+      <h1>Featured Favorites</h1>
+      <div class="menu">
+        <div class="menu-list menu-first" data-show="firstPage">
+          <div class="menu-item menu-first-img"><h2>Big Mac</h2></div>
+          <div class="menu-item menu-first-img"><h2>Spicy McCrispy</h2></div>
+        </div>
+        <div class="menu-list menu-first" data-show="firstPage">
+          <div class="menu-item menu-first-img">
+            <h2>Double Cheeseburger</h2>
+          </div>
+          <div class="menu-item menu-first-img"><h2>Happy Meal</h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-body fourth-page welcome-body container-flex hidden">
+      <h1>Fries</h1>
+      <div class="menu">
+        <div class="menu-list menu-second" data-show="SecondPage">
+          <div class="menu-item menu-second-img"><h2>Fries</h2></div>
+          <div class="menu-item menu-second-img">
+            <h2>Skip</h2>
+            <span class="arrow-right">&#8594;</span>
+          </div>
+        </div>
+        <div class="menu-list menu-second" data-show="SecondPage">
+          <div class="menu-item menu-second-img"><h2>Dipping Fries</h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-body fifth-page welcome-body container-flex hidden">
+      <h1>Sauces</h1>
+      <div class="menu">
+        <div class="menu-list menu-third">
+          <div class="menu-item menu-third-img"><h2>Ketchup</h2></div>
+          <div class="menu-item menu-third-img">
+            <h2>Skip</h2>
+            <span class="arrow-right">&#8594;</span>
+          </div>
+        </div>
+        <div class="menu-list menu-third">
+          <div class="menu-item menu-third-img"><h2>Garlic</h2></div>
+          <div class="menu-item menu-third-img"><h2>BBQ</h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-body welcome-body sixth-page container-flex hidden">
+      <h1>Soft Drinks</h1>
+      <div class="menu">
+        <div class="menu-list menu-fourth">
+          <div class="menu-item menu-fourth-img"><h2>Coca Cola</h2></div>
+          <div class="menu-item menu-fourth-img"><h2>Sprite</h2></div>
+        </div>
+        <div class="menu-list menu-fourth">
+          <div class="menu-item menu-fourth-img"><h2>Fanta</h2></div>
+          <div class="menu-item menu-fourth-img"><h2>Water</h2></div>
+        </div>
+      </div>
+    </div>
+    <div class="container-body welcome-body container-flex seventh-page hidden">
+      <div class="total">
+        <div class="paycheck"><h2>Here Is your Paycheck</h2></div>
+
+        <div class="flex">
+          <div class="mealName">MCCHIKI</div>
+          <div class="mealPrice">80</div>
+        </div>
+        <!-- <div class="flex">
+          <div class="totalprice">Total</div>
+          <div class="totalprice">100</div>
+        </div> -->
+      </div>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

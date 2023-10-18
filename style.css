@@ -1,0 +1,313 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --font-family: "Open Sans";
+  --clr-button: #fee12b;
+  --width-body: 30em;
+  --height-body: 40em;
+  --padding-normal: 2em;
+  --border-radius-body: 2em;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family), sans-serif;
+}
+/* Welcome page */
+.container-body {
+  margin-top: 10em;
+  width: 30em;
+  height: 40em;
+  padding: 2em;
+  border-radius: 2em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 0.5em solid #fee12b;
+}
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.welcome-body {
+  background-image: url(poze/mcpozawelcome.jpg);
+  background-size: cover;
+}
+.logo {
+  scale: 0.6;
+  transform: translateY(-10em);
+}
+.welcome-button {
+  appearance: button;
+  background-color: #fedc56;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.welcome-button:after {
+  background-clip: padding-box;
+  background-color: #fee12b;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.welcome-button:main,
+.welcome-button:focus {
+  user-select: auto;
+}
+
+.welcome-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.welcome-button:disabled {
+  cursor: auto;
+}
+
+.welcome-button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+/* First Page  */
+.buttons {
+  display: flex;
+  gap: 1em;
+}
+.button-photo {
+  width: 10em;
+  height: 15em;
+  margin-bottom: 5em;
+  cursor: pointer;
+}
+.button-photo:nth-child(1) {
+  background-image: url(poze/mceatit.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border: 0.5em solid #fee12b;
+  border-radius: 1em;
+}
+.button-photo:nth-child(2) {
+  background-image: url(poze/mctakeaway.jpg);
+  background-size: cover;
+  background-position-x: center;
+  border: 0.5em solid #fee12b;
+  border-radius: 1em;
+}
+
+/* Second Page */
+.menu {
+  display: flex;
+  margin-bottom: 3em;
+  gap: 1em;
+}
+.menu-list {
+  display: grid;
+  gap: 4em;
+}
+.menu-item {
+  width: 13em;
+  height: 9em;
+  border: 0.5em solid #fee12b;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.menu-list:nth-child(1) .menu-first-img:nth-child(1) {
+  background-image: url(poze/bigmac.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.menu-list:nth-child(2) .menu-first-img:nth-child(1) {
+  background-image: url(poze/doublecheese.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.menu-list:nth-child(1) .menu-first-img:nth-child(2) {
+  background-image: url(poze/mccrispy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+.menu-list:nth-child(2) .menu-first-img:nth-child(2) {
+  background-image: url(poze/happymeal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.menu-item h2 {
+  transform: translateY(-3em);
+  font-size: 1em;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Third Page */
+
+.menu-list:nth-child(1) .menu-second-img:nth-child(1) {
+  background-image: url(poze/mcfries.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.arrow-right {
+  color: red;
+  font-size: 3em;
+}
+.menu-list:nth-child(2) .menu-second-img:nth-child(1) {
+  background-image: url(poze/mcdipping.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+/* Fourth Page */
+
+.menu-list:nth-child(1) .menu-third-img:nth-child(1) {
+  background-image: url(poze/mcketchup.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.menu-list:nth-child(2) .menu-third-img:nth-child(1) {
+  background-image: url(poze/mcgarlic.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.menu-list:nth-child(2) .menu-third-img:nth-child(2) {
+  background-image: url(poze/mcbbq.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+/* Fifth Page  */
+
+.menu-list:nth-child(1) .menu-fourth-img:nth-child(1) {
+  background-image: url(poze/mccocacola.jpg);
+  background-size: cover;
+}
+.menu-list:nth-child(2) .menu-fourth-img:nth-child(1) {
+  background-image: url(poze/mcfanta.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.menu-list:nth-child(2) .menu-fourth-img:nth-child(2) {
+  background-image: url(poze/mcwater.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+.menu-list:nth-child(1) .menu-fourth-img:nth-child(2) {
+  background-image: url(poze/mcsprite.jpg);
+  background-size: cover;
+  background-position-y: center;
+}
+
+/* Last Page  */
+
+.total {
+  display: grid;
+  gap: 1em;
+  border: 0.5em solid #fee12b;
+  padding: 2em;
+  border-radius: 2em;
+  background-color: whitesmoke;
+}
+.flex {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+}
